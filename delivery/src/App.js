@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Template from './components/Template'
 import DeliveryItemList from './components/DeliveryItemList';
+import OrderItemList from './components/OrderItemList';
 import {
   BrowserRouter as Router,
   Route,
@@ -8,12 +9,12 @@ import {
 } from 'react-router-dom'
 
 const deliveries = [
-  { id: 0, text: '식당1'},
-  { id: 1, text: '식당2'},
-  { id: 2, text: '식당3'},
-  { id: 3, text: '식당4'},
-  { id: 4, text: '식당5'},
-  { id: 5, text: '식당6'},
+  { id: 1, text: '식당1', orderList: [{id: 1, order: '밥1', price: '1000'}, {id: 2, order: '밥2', price: '2000'}]},
+  { id: 2, text: '식당2', orderList: [{id: 1, order: '밥1', price: '1000'}, {id: 2, order: '밥2', price: '2000'}]},
+  { id: 3, text: '식당3', orderList: [{id: 1, order: '밥1', price: '1000'}, {id: 2, order: '밥2', price: '2000'}]},
+  { id: 4, text: '식당4', orderList: [{id: 1, order: '밥1', price: '1000'}, {id: 2, order: '밥2', price: '2000'}]},
+  { id: 5, text: '식당5', orderList: [{id: 1, order: '밥1', price: '1000'}, {id: 2, order: '밥2', price: '2000'}]},
+  { id: 6, text: '식당6', orderList: [{id: 1, order: '밥1', price: '1000'}, {id: 2, order: '밥2', price: '2000'}]},
 ]
 
 const App = () => (
@@ -39,9 +40,12 @@ class Main extends Component {
 
 class Detail extends Component {
   render () {
+    const {params} = this.props.match
+    const id = parseInt(params.id, 10)
+    const deliveryDetail = deliveries.filter(e => e.id === id)[0]
     return (
       <Template>
-        {this.props.match.params.id}
+        <OrderItemList deliveryDetail={deliveryDetail} />
       </Template>
     )
   }
