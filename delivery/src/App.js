@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Template from './components/Template'
 import DeliveryItemList from './components/DeliveryItemList';
 import OrderItemList from './components/OrderItemList';
+import BackButton from './components/BackButton';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -45,6 +47,7 @@ class Detail extends Component {
     const deliveryDetail = deliveries.filter(e => e.id === id)[0]
     return (
       <Template>
+        <BackButton />
         <OrderItemList deliveryDetail={deliveryDetail} />
       </Template>
     )
