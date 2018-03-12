@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import './DeliveryItem.css'
 
+import {
+  Link,
+} from 'react-router-dom'
+
 class DeliveryItem extends Component {
   constructor (props) {
     super(props)
@@ -19,7 +23,9 @@ class DeliveryItem extends Component {
   render () {
     return (
       <div className="delivery-item" onClick={this.clickHandler}>
-        <div>{this.props.text}</div>
+        <Link to={'/' + this.props.id}>
+          <div>{this.props.text}</div>
+        </Link>
       </div>
     )
   }
