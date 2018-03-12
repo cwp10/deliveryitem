@@ -5,6 +5,8 @@ import {
   Redirect,
 } from 'react-router-dom'
 
+import history from '../history'
+
 class DeliveryItem extends Component {
   constructor (props) {
     super(props)
@@ -19,6 +21,7 @@ class DeliveryItem extends Component {
 
   clickHandler (e) {
     console.log(this.props.id + ' : ' + this.props.text)
+    history.push('/' + this.props.id)
     this.setState({clicked: true})
   }
 
