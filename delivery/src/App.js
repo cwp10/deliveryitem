@@ -48,7 +48,7 @@ class Detail extends Component {
     return (
       <Template>
         <BackButton />
-        <OrderItemList deliveryDetail={deliveryDetail} />
+        <OrderItemList orderList={deliveryDetail.orderList} />
       </Template>
     )
   }

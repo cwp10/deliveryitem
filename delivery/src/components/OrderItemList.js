@@ -3,9 +3,8 @@ import OrderItem from './OrderItem'
 
 class OrderItemList extends Component {
   render() {
-    console.log(this.props)
-    const {deliveryDetail} = this.props
-    const orderList = deliveryDetail.orderList.map(
+    const {orderList} = this.props
+    const list = orderList.map(
       ({id, order, price}) => (
         <OrderItem
           id={id}
@@ -17,7 +16,7 @@ class OrderItemList extends Component {
     )
     return (
       <div>
-        {orderList}
+        {list}
       </div>
     )
   }
