@@ -3,6 +3,7 @@ import Template from './components/Template'
 import DeliveryItemList from './components/DeliveryItemList';
 import OrderItemList from './components/OrderItemList';
 import BackButton from './components/BackButton';
+import OrderButton from './components/OrderButton';
 
 import {
   BrowserRouter as Router,
@@ -49,6 +50,7 @@ class Detail extends Component {
       <Template>
         <BackButton />
         <OrderItemList orderList={deliveryDetail.orderList} />
+        <OrderButton />
       </Template>
     )
   }
