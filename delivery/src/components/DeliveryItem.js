@@ -1,10 +1,5 @@
 import React, {Component} from 'react'
 import './DeliveryItem.css'
-
-import {
-  Redirect,
-} from 'react-router-dom'
-
 import history from '../history'
 
 class DeliveryItem extends Component {
@@ -20,16 +15,10 @@ class DeliveryItem extends Component {
   }
 
   clickHandler (e) {
-    console.log(this.props.id + ' : ' + this.props.text)
     history.push('/' + this.props.id)
-    this.setState({clicked: true})
   }
 
   render () {
-    if(this.state.clicked) {
-      console.log(this.state.clicked)
-      return <Redirect to={'/' + this.props.id} />
-    }
     return (
       <div className="delivery-item" onClick={this.clickHandler}>
         <div>{this.props.text}</div>
