@@ -1,7 +1,8 @@
+import { withRouter } from 'react-router-dom'
 import '../../stylesheets/Restaurant.scss'
 
-const Restaurant = ({id, photo, restaurant, description, orderList}) =>
-  <div className="restaurant">
+const Restaurant = ({id, photo, restaurant, description, history}) =>
+  <div className="restaurant" onClick={() => history.push(`/${id}`)}>
     <img src={photo} className="restaurant-photo" />
     <span className="restaurant-title">
       {restaurant}
@@ -11,4 +12,4 @@ const Restaurant = ({id, photo, restaurant, description, orderList}) =>
     </span>
   </div>
 
-export default Restaurant
+export default withRouter(Restaurant)

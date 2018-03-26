@@ -2,10 +2,13 @@ import React from 'react'
 import {render} from 'react-dom'
 import App from './components/App'
 import data from '../data/restaurants'
+import { HashRouter } from 'react-router-dom'
 
 window.React = React
 
 render(
-  <App restaurants={data}/>,
+  <HashRouter>
+    <App restaurants={data}/>
+  </HashRouter>,
   document.getElementById('react-container')
 )
