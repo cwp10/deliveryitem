@@ -1,0 +1,31 @@
+@import "globals";
+
+.restaurant {
+  background-color: $cell-color;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.restaurant-photo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.restaurant-title {
+  position: absolute;
+  left: 135px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.restaurant-description {
+  position: absolute;
+  left: 135px;
+  padding-top: 35px;
+  text-align: left;
+  font-size: 14px;
+}
+
