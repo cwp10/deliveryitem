@@ -3,6 +3,7 @@ import RestaurantList from './RestaurantList'
 import RestaurantDetails from './RestaurantDetails'
 import { compose } from 'redux'
 import { changeQty } from '../actions'
+import OrderPage from './OrderPage';
 
 export const Restaurants = connect(
   ({ restaurants }, { match }) => ({
@@ -18,6 +19,10 @@ export const Restaurant = connect(
     }
   })
 )(RestaurantDetails)
+
+export const OrderList = connect(
+  ({ restaurants }, { match }) => findById(restaurants, match.params.id)
+)(OrderPage)
 
 const getFirstArrayItem = array => array[0]
 
