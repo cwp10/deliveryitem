@@ -1,6 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import Backbutton from './Backbutton'
+import RestaurantItem from './RestaurantItem'
 import '../../stylesheets/RestaurantDetail.scss'
 
 class RestaurantDetail extends React.Component {
@@ -17,9 +18,16 @@ class RestaurantDetail extends React.Component {
         <div className="restaurant-detail">
           <img src={detail.photo} className="restaurant-detail-photo" />
           <div className="restaurant-detail-title">
-            <h1>{detail.restaurant}</h1>
-            <h2>{detail.description}</h2>
+            <h3>{detail.restaurant}</h3>
+            <h4>{detail.description}</h4>
           </div>
+        </div>
+        <div>
+          {detail.orderList.map((item, i) =>
+            <RestaurantItem key={i}
+              {...item}
+            />
+          )}
         </div>
       </div>
     )
