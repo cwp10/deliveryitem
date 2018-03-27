@@ -5,22 +5,33 @@ class RestaurantItem extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      restaurantId: this.props.restaurantId,
       id: this.props.id,
       name: this.props.name,
       price: this.props.price,
-      qty: 0
+      qty: this.props.qty
     }
     this.onClickPlus = this.onClickPlus.bind(this)
     this.onClickMinus = this.onClickMinus.bind(this)
   }
 
+  componentWillMount() {
+    this.setState({qty: 0})
+    this.props.onQtyChange(this.state.restaurantId, this.state.id, 0)
+  }
+
   onClickPlus (e) {
-    const newValue = this.state.qty + 1
-    this.setState({qty: newValue})
+    let newQty = this.state.qty + 1
+    this.setState({qty: newQty})
+    this.props.onQtyChange(this.state.restaurantId, this.state.id, newQty)
   }
 
   onClickMinus (e) {
-    (this.state.qty > 0) ? this.setState({qty: this.state.qty - 1}) : 0
+    if(this.state.qty > 0) {
+      let newQty = this.state.qty - 1
+      this.setState({qty: newQty})
+      this.props.onQtyChange(this.state.restaurantId, this.state.id, newQty)
+    }
   }
 
   render() {

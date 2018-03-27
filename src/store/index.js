@@ -13,7 +13,19 @@ const logger = store => next => action => {
   return result
 }
 
-const storeFactory = () =>
-  createStore(restaurants, stateData)
+const saver = store => next => action => {
+  let result = next(action)
+  localStorage['restaurants-app'] = JSON.stringify(store.getState())
+  return result
+}
+
+const storeFactory = (initialState = stateData) =>
+  applyMiddleware(logger, saver)(createStore)(
+    combineReducers({ restaurants }),
+    (localStorage['restaurants-app']) ?
+      JSON.parse(localStorage['restaurants-app']) :
+      initialState
+  )
+
 
 export default storeFactory

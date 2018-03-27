@@ -1,17 +1,23 @@
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import RestaurantList from './RestaurantList'
-import RestaurantDetail from './RestaurantDetail'
-import {compose} from 'redux'
-
-export const Restaurant = connect(
-  ({ restaurants }, { match }) => findById(restaurants, match.params.id)
-)(RestaurantDetail)
+import RestaurantDetails from './RestaurantDetails'
+import { compose } from 'redux'
+import { changeQty } from '../actions'
 
 export const Restaurants = connect(
-  ({ restaurants }) => ({
-    restaurants
+  ({ restaurants }, { match }) => ({
+    restaurants: restaurants
   })
 )(RestaurantList)
+
+export const Restaurant = connect(
+  ({ restaurants }, { match }) => findById(restaurants, match.params.id),
+  dispatch => ({
+    onQtyChange(restaurantId, id, qty) {
+      dispatch(changeQty(restaurantId, id, qty))
+    }
+  })
+)(RestaurantDetails)
 
 const getFirstArrayItem = array => array[0]
 
