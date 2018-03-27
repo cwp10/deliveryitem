@@ -2,15 +2,25 @@ import React from 'react'
 import '../../stylesheets/RestaurantItem.scss'
 
 class RestaurantItem extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      item: props,
+      qty: 0
+    }
+  }
+
   render() {
-    const item = this.props
     return (
       <div className="restaurant-item">
         <span>
-          {item.order}
+          {this.state.item.name}
         </span>
         <span>
-          {item.price}
+          {this.state.item.price}
+        </span>
+        <span>
+          {this.state.qty}
         </span>
       </div>
     )

@@ -4,30 +4,30 @@
     "restaurant": "식당1",
     "photo": "assets/img/vender/1.jpg",
     "description": "맛있는 식당",
-    "orderList": [
+    "itemList": [
       {
         "id": 1,
-        "order": "밥1",
+        "name": "밥1",
         "price": 1000
       },
       {
         "id": 2,
-        "order": "밥2",
+        "name": "밥2",
         "price": 2000
       },
       {
         "id": 3,
-        "order": "밥3",
+        "name": "밥3",
         "price": 3000
       },
       {
         "id": 4,
-        "order": "밥4",
+        "name": "밥4",
         "price": 3000
       },
       {
         "id": 5,
-        "order": "밥5",
+        "name": "밥5",
         "price": 3500
       }
     ]
@@ -37,20 +37,20 @@
     "photo": "assets/img/vender/2.jpg",
     "restaurant": "식당2",
     "description": "착한 식당",
-    "orderList": [
+    "itemList": [
       {
         "id": 1,
-        "order": "밥1",
+        "name": "밥1",
         "price": 1000
       },
       {
         "id": 2,
-        "order": "밥2",
+        "name": "밥2",
         "price": 2000
       },
       {
         "id": 3,
-        "order": "밥3",
+        "name": "밥3",
         "price": 3000
       }
     ]
@@ -60,15 +60,15 @@
     "photo": "assets/img/vender/3.jpg",
     "restaurant": "식당3",
     "description": "좋은 식당",
-    "orderList": [
+    "itemList": [
       {
         "id": 1,
-        "order": "밥1",
+        "name": "밥1",
         "price": 1000
       },
       {
         "id": 2,
-        "order": "밥2",
+        "name": "밥2",
         "price": 2000
       }
     ]
@@ -78,20 +78,20 @@
     "photo": "assets/img/vender/4.jpg",
     "restaurant": "식당4",
     "description": "나쁜 식당",
-    "orderList": [
+    "itemList": [
       {
         "id": 1,
-        "order": "밥1",
+        "name": "밥1",
         "price": 1000
       },
       {
         "id": 2,
-        "order": "밥2",
+        "name": "밥2",
         "price": 2000
       },
       {
         "id": 3,
-        "order": "밥3",
+        "name": "밥3",
         "price": 3000
       }
     ]
@@ -101,40 +101,40 @@
     "photo": "assets/img/vender/5.jpg",
     "restaurant": "식당5",
     "description": "더러운 식당",
-    "orderList": [
+    "itemList": [
       {
         "id": 1,
-        "order": "밥1",
+        "name": "밥1",
         "price": 1000
       },
       {
         "id": 2,
-        "order": "밥2",
+        "name": "밥2",
         "price": 2000
       },
       {
         "id": 3,
-        "order": "밥3",
+        "name": "밥3",
         "price": 3000
       },
       {
         "id": 4,
-        "order": "밥4",
+        "name": "밥4",
         "price": 5000
       },
       {
         "id": 5,
-        "order": "밥5",
+        "name": "밥5",
         "price": 2200
       },
       {
         "id": 6,
-        "order": "밥6",
+        "name": "밥6",
         "price": 1000
       },
       {
         "id": 7,
-        "order": "밥7",
+        "name": "밥7",
         "price": 3500
       }
     ]

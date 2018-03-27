@@ -23,7 +23,7 @@ class RestaurantDetail extends React.Component {
           </div>
         </div>
         <div>
-          {detail.orderList.map((item, i) =>
+          {detail.itemList.map((item, i) =>
             <RestaurantItem key={i}
               {...item}
             />
