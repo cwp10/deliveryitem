@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import Backbutton from './Backbutton'
 import RestaurantItem from './RestaurantItem'
+import OrderButton from './OrderButton'
 import '../../stylesheets/RestaurantDetail.scss'
 
 class RestaurantDetail extends React.Component {
@@ -22,6 +23,7 @@ class RestaurantDetail extends React.Component {
             <h4>{detail.description}</h4>
           </div>
         </div>
+        <OrderButton history={this.props.history} id={detail.id}/>
         <div>
           {detail.itemList.map((item, i) =>
             <RestaurantItem key={i}
