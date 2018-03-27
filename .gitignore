@@ -9,7 +9,7 @@
 # production
 /build
 /dist/assets/bundle.js
-/dist/assets/bundle.json
+/dist/assets/bundle.map
 
 # misc
 .DS_Store

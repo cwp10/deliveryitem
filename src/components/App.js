@@ -5,7 +5,9 @@ import '../../stylesheets/App.scss'
 
 const App = ({ restaurants }) =>
   <Switch>
-    <Route exact path="/:id" component={RestaurantDetail} />
+    <Route exact path="/:id" component={() => (
+      <RestaurantDetail list={restaurants} />
+    )} />
     <Route path="/" component={() => (
       <div className="app">
         <RestaurantList list={restaurants} />
