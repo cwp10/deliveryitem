@@ -1,11 +1,11 @@
 import C from './constants'
 
-export const addOrder = (id, order, price) => ({
+export const addOrder = (id, order, price, qty) => ({
   type: C.ADD_ORDER,
   id,
   order,
   price,
-  qty: 0
+  qty
 })
 
 export const changeQty = (id, qty) => ({

@@ -6,12 +6,18 @@ import OrderButton from './OrderButton'
 import '../../stylesheets/RestaurantDetail.scss'
 
 class RestaurantDetail extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      list: this.props.list
+    }
+  }
+
   render() {
-    const {list} = this.props
+    console.log(this.state.list)
     const {params} = this.props.match
     const id = parseInt(params.id, 10)
-    const detail = list.filter(e => e.id === id)[0]
-    console.log(this.props)
+    const detail = this.state.list.filter(e => e.id === id)[0]
 
     return (
       <div>
