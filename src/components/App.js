@@ -9,9 +9,7 @@ const App = ({ restaurants }) =>
       <RestaurantDetail list={restaurants} />
     )} />
     <Route path="/" component={() => (
-      <div className="app">
-        <RestaurantList list={restaurants} />
-      </div>
+      <RestaurantList list={restaurants} />
     )} />
   </Switch>
 
