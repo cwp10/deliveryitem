@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import RestaurantList from './RestaurantList'
-import RestaurantDetails from './RestaurantDetails'
+import RestaurantList from './ui/RestaurantList'
+import RestaurantDetails from './/ui/RestaurantDetails'
 import { compose } from 'redux'
 import { changeQty } from '../actions'
-import OrderPage from './OrderPage';
+import OrderPage from './/ui/OrderPage';
 
 export const Restaurants = connect(
   ({ restaurants }, { match }) => ({

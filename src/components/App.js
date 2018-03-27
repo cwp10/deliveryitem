@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom'
-import RestaurantList from './RestaurantList'
-import OrderPage from './OrderPage'
+import RestaurantList from './ui/RestaurantList'
+import OrderPage from './ui//OrderPage'
 import '../../stylesheets/App.scss'
 import { Restaurants, Restaurant, OrderList } from './containers'
 

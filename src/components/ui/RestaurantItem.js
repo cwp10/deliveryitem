@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../stylesheets/RestaurantItem.scss'
+import '../../../stylesheets/RestaurantItem.scss'
 
 class RestaurantItem extends React.Component {
   constructor (props) {

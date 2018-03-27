@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import Backbutton from './Backbutton'
 import RestaurantItem from './RestaurantItem'
 import OrderButton from './OrderButton'
-import '../../stylesheets/RestaurantDetails.scss'
+import '../../../stylesheets/RestaurantDetails.scss'
 
 class RestaurantDetails extends Component {
   render () {

@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
-import '../../stylesheets/Restaurant.scss'
+import '../../../stylesheets/Restaurant.scss'
 
 class Restaurant extends Component {
   render () {
