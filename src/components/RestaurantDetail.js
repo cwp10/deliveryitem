@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import Backbutton from './Backbutton'
 import '../../stylesheets/RestaurantDetail.scss'
 
 class RestaurantDetail extends React.Component {
@@ -8,10 +9,11 @@ class RestaurantDetail extends React.Component {
     const {params} = this.props.match
     const id = parseInt(params.id, 10)
     const detail = list.filter(e => e.id === id)[0]
-    console.log(detail)
-    
+    console.log(this.props)
+
     return (
       <div>
+        <Backbutton history={this.props.history}/>
         <div className="restaurant-detail">
           <img src={detail.photo} className="restaurant-detail-photo" />
           <div className="restaurant-detail-title">
