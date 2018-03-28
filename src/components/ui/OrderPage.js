@@ -3,6 +3,7 @@ import React from 'react'
 import Topbar from './Topbar'
 import OrderItem from './OrderItem'
 import OrderStart from './OrderStart'
+import '../../../stylesheets/OrderPage.scss'
 
 class OrderPage extends React.Component {
   render () {
@@ -10,17 +11,20 @@ class OrderPage extends React.Component {
     return (
       <div>
         <Topbar history={history}/>
+        <div className="order-restaurant">
+          <div className="order-restaurant-name">
+            {restaurant}
+          </div>
+        </div>
         <br/>
-        <br/>
-        <br/>
-        <div>
-          {restaurant}
-          {description}
+        <div className="order-list">
           {itemList.map((item, i) =>
             <OrderItem key={i}
               {...item}
             />
           )}
+        </div>
+        <div className="order-button">
           <OrderStart history={history} />
         </div>
       </div>

@@ -1,0 +1,21 @@
+@import "globals";
+
+.order-restaurant {
+  height: 100%;
+
+  .order-restaurant-name {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.order-list {
+  text-align: center;
+}
+
+.order-button {
+  padding-top: 20px;
+  text-align: center;
+}
