@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Backbutton from './Backbutton'
+import Topbar from './Topbar'
 import OrderList from './OrderList'
 import OrderStart from './OrderStart'
 
@@ -9,7 +9,7 @@ class OrderPage extends React.Component {
     const { id, photo, restaurant, description, itemList, history } = this.props
     return (
       <div>
-        <Backbutton history={history}/>
+        <Topbar history={history}/>
         <div>
           {restaurant}
           {description}
