@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Topbar from './Topbar'
-import OrderList from './OrderList'
+import OrderItem from './OrderItem'
 import OrderStart from './OrderStart'
 
 class OrderPage extends React.Component {
@@ -17,7 +17,7 @@ class OrderPage extends React.Component {
           {restaurant}
           {description}
           {itemList.map((item, i) =>
-            <OrderList key={i}
+            <OrderItem key={i}
               {...item}
             />
           )}
