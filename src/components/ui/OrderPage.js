@@ -10,6 +10,9 @@ class OrderPage extends React.Component {
     return (
       <div>
         <Topbar history={history}/>
+        <br/>
+        <br/>
+        <br/>
         <div>
           {restaurant}
           {description}
