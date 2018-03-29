@@ -1,6 +1,8 @@
 import React from 'react'
+import '../../../stylesheets/OrderButton.scss'
 
 class OrderButton extends React.Component {
+  
   render () {
     const {history} = this.props
     const id = this.props.id
@@ -10,7 +12,7 @@ class OrderButton extends React.Component {
     }
 
     return (
-      <button onClick={goOrder}>
+      <button className="order-button" onClick={goOrder}>
         주문하기
       </button>
     )
