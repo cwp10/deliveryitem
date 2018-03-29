@@ -1,6 +1,7 @@
 @import "globals";
 
 .button-bar {
+  z-index: 5;
   position: fixed;
   height: 50px;
   width: 100%;

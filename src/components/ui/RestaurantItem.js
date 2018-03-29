@@ -38,12 +38,14 @@ class RestaurantItem extends React.Component {
   render() {
     return (
       <div className="restaurant-item">
-        <span>음식 : {this.state.name}</span>
-        <span>가격 : {this.state.price} 원</span>
-        
-        <button onClick={this.onClickPlus}>+</button>
-        <span>수량 : {this.state.qty} 개</span>
-        <button onClick={this.onClickMinus}>-</button>
+        <div className="restaurant-item-name">음식명 : {this.state.name}</div>
+        <span className="restaurant-item-price">가격 : {this.state.price} 원</span>
+
+        <div className="restaurant-item-qty">
+          <button onClick={this.onClickPlus}>+</button>
+          <span> 수량 : {this.state.qty} 개 </span>
+          <button onClick={this.onClickMinus}>-</button>
+        </div>
       </div>
     )
   }

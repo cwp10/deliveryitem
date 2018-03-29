@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../../stylesheets/OrderStart.scss'
 
 class OrderStart extends React.Component {
   render () {
@@ -10,7 +11,7 @@ class OrderStart extends React.Component {
     }
 
     return (
-      <button onClick={goStart}>
+      <button className="order-start" onClick={goStart}>
         주문 시작
       </button>
     )

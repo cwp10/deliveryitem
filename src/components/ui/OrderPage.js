@@ -33,12 +33,13 @@ class OrderPage extends React.Component {
               />
             )}
           </div>
-          <br/><br/>
+          <br/>
+          <hr/>
           <div className="order-price">
             총 금액 : {totalprice} 원
           </div>
         </div>
-        <br/><br/><br/><br/>
+        <br/>
         <div className="order-start-button">
           <OrderStart onResetOrder={onResetOrder} history={history} />
         </div>

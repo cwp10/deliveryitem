@@ -1,4 +1,5 @@
 import Restaurant from './Restaurant'
+import Topbar from './Topbar'
 import PropTypes from 'prop-types'
 
 const RestaurantList = ({restaurants = []}) =>
