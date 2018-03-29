@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import RestaurantList from './ui/RestaurantList'
 import RestaurantDetails from './/ui/RestaurantDetails'
 import { compose } from 'redux'
-import { changeQty } from '../actions'
+import { changeQty, resetOrder } from '../actions'
 import OrderPage from './/ui/OrderPage';
 
 export const Restaurants = connect(
@@ -14,14 +14,19 @@ export const Restaurants = connect(
 export const Restaurant = connect(
   ({ restaurants }, { match }) => findById(restaurants, match.params.id),
   dispatch => ({
-    onQtyChange(restaurantId, id, qty) {
+    onChangeQty(restaurantId, id, qty) {
       dispatch(changeQty(restaurantId, id, qty))
     }
   })
 )(RestaurantDetails)
 
 export const OrderList = connect(
-  ({ restaurants }, { match }) => findById(restaurants, match.params.id)
+  ({ restaurants }, { match }) => findById(restaurants, match.params.id),
+  dispatch => ({
+    onResetOrder() {
+      dispatch(resetOrder())
+    }
+  })
 )(OrderPage)
 
 const getFirstArrayItem = array => array[0]

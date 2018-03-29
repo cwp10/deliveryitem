@@ -7,7 +7,7 @@ import '../../../stylesheets/OrderPage.scss'
 
 class OrderPage extends React.Component {
   render () {
-    const { id, photo, restaurant, description, itemList, history } = this.props
+    const { id, photo, restaurant, description, itemList, onResetOrder, history } = this.props
     let totalprice = 0
     for (let i = 0; i < itemList.length; i++) {
       if(itemList[i].qty > 0) {
@@ -38,7 +38,7 @@ class OrderPage extends React.Component {
           총 금액 : {totalprice} 원
         </div>
         <div className="order-button">
-          <OrderStart history={history} />
+          <OrderStart onResetOrder={onResetOrder} history={history} />
         </div>
       </div>
     )

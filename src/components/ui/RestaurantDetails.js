@@ -7,7 +7,7 @@ import '../../../stylesheets/RestaurantDetails.scss'
 
 class RestaurantDetails extends Component {
   render() {
-    const { id, photo, restaurant, description, itemList, onQtyChange, history } = this.props
+    const { id, photo, restaurant, description, itemList, onChangeQty, history } = this.props
 
     return (
       <div>
@@ -28,7 +28,7 @@ class RestaurantDetails extends Component {
         </div>
         <div>
           {itemList.map((item, i) =>
-            <RestaurantItem key={i} restaurantId={id} onQtyChange={onQtyChange}
+            <RestaurantItem key={i} restaurantId={id} onChangeQty={onChangeQty}
               {...item}
             />
           )}

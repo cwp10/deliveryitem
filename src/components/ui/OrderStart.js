@@ -2,9 +2,10 @@ import React from 'react'
 
 class OrderStart extends React.Component {
   render () {
-    const {history} = this.props
+    const {onResetOrder, history} = this.props
 
     const goStart = (e) => {
+      onResetOrder()
       history.push('/')
     }
 
