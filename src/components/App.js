@@ -5,11 +5,13 @@ import '../../stylesheets/App.scss'
 import { Restaurants, Restaurant, OrderList } from './containers'
 
 const App = () =>
-  <Switch>
-    <Route exact path="/:id" component={Restaurant} />
-    <Route path="/:id/order" component={OrderList} />
+  <div>
     <Route exact path="/" component={Restaurants}/>
-  </Switch>
-
+    <Switch>
+      <Route path="/:id/order" component={OrderList} />
+      <Route path="/:id" component={Restaurant} />
+    </Switch>
+  </div>
+  
 export default App
 
